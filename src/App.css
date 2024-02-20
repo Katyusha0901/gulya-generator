@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  font-family: "Libre";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.app__row {
+  display: flex;
+  flex-direction: row;
+}

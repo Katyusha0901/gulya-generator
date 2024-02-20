@@ -1,0 +1,42 @@
+.square {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.square__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.square__up-arrow {
+}
+
+.square__center {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.square__left-arrow {
+}
+
+.square__center-content {
+}
+
+.square__right-arrow {
+}
+
+.square__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.square__down-arrow {
+}
