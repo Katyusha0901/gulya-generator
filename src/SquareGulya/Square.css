@@ -22,6 +22,23 @@
   margin: 10px;
 }
 
+.square__display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.square__display-name {
+}
+
+.square__display-photo {
+  width: 20px;
+}
+
+.square__display-description {
+}
+
 .square__left-arrow {
 }
 

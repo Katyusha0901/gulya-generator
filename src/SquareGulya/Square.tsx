@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./Square.css";
 import { AddButton } from "./AddButton";
-import { Display } from "./Display/Display";
-import { CloseButton } from "./Display/CloseButton";
+import { CloseButton } from "./CloseButton";
 import { Emotion } from "../App";
 
 interface Props {
   item: Emotion;
+  changeItemDown: Function;
 }
 
 export const Square: React.FC<Props> = ({ item }) => {
@@ -19,11 +19,10 @@ export const Square: React.FC<Props> = ({ item }) => {
       return (
         <div>
           <CloseButton onDelete={deleteItem} />
-          <div className="display">
-            <p className="display__name">{item.name}</p>
-            <div className="display__photo"></div>
-            <input className="display__description" />
-            <button className="display__save-button"></button>
+          <div className="square__display">
+            <p className="square__display-name">{item.name}</p>
+            <img className="square__display-photo" src={item.photo} />
+            <input className="square__display-description" />
           </div>
         </div>
       );
