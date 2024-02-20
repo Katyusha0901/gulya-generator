@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Square.css";
 import { AddButton } from "./AddButton";
-import { GulyaDisplay } from "./Gulya/GulyaDisplay";
+import { GulyaDisplay } from "./Gulya/Display";
 import { CloseButton } from "./Gulya/CloseButton";
 
 interface Props {

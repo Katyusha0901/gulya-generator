@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./GulyaDisplay.css";
+import "./Display.css";
 import { Gulya } from "../Square";
 
 interface Props {}
