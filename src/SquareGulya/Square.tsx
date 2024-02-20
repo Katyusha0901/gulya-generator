@@ -11,7 +11,6 @@ interface Props {
 
 export const Square: React.FC<Props> = ({ object }) => {
   const [isAdding, setIsAdding] = useState<boolean>(true);
-  // const emotionObject = {object.name}
 
   function displayCenterContent() {
     if (isAdding) {
