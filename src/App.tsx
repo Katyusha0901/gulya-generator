@@ -12,23 +12,23 @@ export default function App() {
     { id: 0, name: "грусть" },
   ]);
 
-  function findObject(i: number) {
+  function findItem(i: number) {
     return emotions[i];
   }
   return (
     <div className="app">
       <div className="app__content">
         <div className="app__row">
-          <Square object={findObject(0)} />
-          <Square object={findObject(0)} />
-          <Square object={findObject(0)} />
-          <Square object={findObject(0)} />
+          <Square item={findItem(0)} />
+          <Square item={findItem(0)} />
+          <Square item={findItem(0)} />
+          <Square item={findItem(0)} />
         </div>
         <div className="app__row">
-          <Square object={findObject(0)} />
-          <Square object={findObject(0)} />
-          <Square object={findObject(0)} />
-          <Square object={findObject(0)} />
+          <Square item={findItem(0)} />
+          <Square item={findItem(0)} />
+          <Square item={findItem(0)} />
+          <Square item={findItem(0)} />
         </div>
       </div>
     </div>

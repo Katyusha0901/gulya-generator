@@ -6,10 +6,10 @@ import { CloseButton } from "./Display/CloseButton";
 import { Emotion } from "../App";
 
 interface Props {
-  object: Emotion;
+  item: Emotion;
 }
 
-export const Square: React.FC<Props> = ({ object }) => {
+export const Square: React.FC<Props> = ({ item }) => {
   const [isAdding, setIsAdding] = useState<boolean>(true);
 
   function displayCenterContent() {
@@ -20,7 +20,7 @@ export const Square: React.FC<Props> = ({ object }) => {
         <div>
           <CloseButton onDelete={deleteItem} />
           <div className="display">
-            <p className="display__name">{object.name}</p>
+            <p className="display__name">{item.name}</p>
             <div className="display__photo"></div>
             <input className="display__description" />
             <button className="display__save-button"></button>
