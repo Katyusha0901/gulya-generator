@@ -1,15 +1,15 @@
 import "./CloseButton.css";
 
 interface Props {
-  onDeleteGulya: Function;
+  onDelete: Function;
 }
 
-export const CloseButton: React.FC<Props> = ({ onDeleteGulya }) => {
+export const CloseButton: React.FC<Props> = ({ onDelete }) => {
   return (
     <button
       className="closeButton"
       onClick={() => {
-        onDeleteGulya();
+        onDelete();
       }}
     >
       X

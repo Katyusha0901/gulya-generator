@@ -1,34 +1,17 @@
 import { useState } from "react";
 import "./Square.css";
 import { AddButton } from "./AddButton";
-import { GulyaDisplay } from "./Gulya/Display";
-import { CloseButton } from "./Gulya/CloseButton";
+import { Display } from "./Display/Display";
+import { CloseButton } from "./Display/CloseButton";
+import { Emotion } from "../App";
 
 interface Props {
-  onChangeNumber: (number: number) => void;
+  object: Emotion;
 }
 
-export interface Gulya {
-  id: number;
-  position: string;
-  name: string;
-  isEditing: boolean;
-}
-
-export const Square: React.FC<Props> = ({ onChangeNumber }) => {
+export const Square: React.FC<Props> = ({ object }) => {
   const [isAdding, setIsAdding] = useState<boolean>(true);
-  const [gulyas, setGulyas] = useState<Gulya[]>([]);
-
-  function addPosition(text: string) {
-    setGulyas([
-      ...gulyas,
-      { id: 0, position: text, name: text, isEditing: true },
-    ]);
-  }
-
-  function changeGulya(gulya: Gulya) {
-    setGulyas(gulyas.map((g) => (g.id === gulya.id ? gulya : g)));
-  }
+  // const emotionObject = {object.name}
 
   function displayCenterContent() {
     if (isAdding) {
@@ -36,8 +19,13 @@ export const Square: React.FC<Props> = ({ onChangeNumber }) => {
     } else {
       return (
         <div>
-          <CloseButton onDeleteGulya={deleteGulya} />
-          <GulyaDisplay />
+          <CloseButton onDelete={deleteItem} />
+          <div className="display">
+            <p className="display__name">{object.name}</p>
+            <div className="display__photo"></div>
+            <input className="display__description" />
+            <button className="display__save-button"></button>
+          </div>
         </div>
       );
     }
@@ -47,7 +35,7 @@ export const Square: React.FC<Props> = ({ onChangeNumber }) => {
     setIsAdding(false);
   }
 
-  function deleteGulya() {
+  function deleteItem() {
     setIsAdding(true);
   }
 
