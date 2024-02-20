@@ -1,19 +1,38 @@
 import { useState } from "react";
-import "./SquareGulya.css";
-import { AddGulyaButton } from "./AddGulyaButton";
-import { GulyaDisplay } from "./GulyaDisplay/GulyaDisplay";
-import { CloseButton } from "./GulyaDisplay/CloseButton";
+import "./Square.css";
+import { AddButton } from "./AddButton";
+import { GulyaDisplay } from "./Gulya/GulyaDisplay";
+import { CloseButton } from "./Gulya/CloseButton";
 
 interface Props {
-  onChangeGulyaNumber: (gulyaNumber: number) => void;
+  onChangeNumber: (number: number) => void;
 }
 
-export const SquareGulya: React.FC<Props> = ({ onChangeGulyaNumber }) => {
+export interface Gulya {
+  id: number;
+  position: string;
+  name: string;
+  isEditing: boolean;
+}
+
+export const Square: React.FC<Props> = ({ onChangeNumber }) => {
   const [isAdding, setIsAdding] = useState<boolean>(true);
+  const [gulyas, setGulyas] = useState<Gulya[]>([]);
+
+  function addPosition(text: string) {
+    setGulyas([
+      ...gulyas,
+      { id: 0, position: text, name: text, isEditing: true },
+    ]);
+  }
+
+  function changeGulya(gulya: Gulya) {
+    setGulyas(gulyas.map((g) => (g.id === gulya.id ? gulya : g)));
+  }
 
   function displayCenterContent() {
     if (isAdding) {
-      return <AddGulyaButton onChangeIsAdding={changeIsAdding} />;
+      return <AddButton onChangeIsAdding={changeIsAdding} />;
     } else {
       return (
         <div>

@@ -1,26 +1,23 @@
 import "./App.css";
-import { SquareGulya } from "./SquareGulya/SquareGulya";
+import { Square } from "./SquareGulya/Square";
 
 export default function App() {
-  function gulyaNumber(gulyaNumber: number) {}
+  function number(number: number) {}
 
   return (
     <div className="app">
       <div className="app__content">
         <div className="app__row">
-          <SquareGulya onChangeGulyaNumber={gulyaNumber} />
-          <SquareGulya onChangeGulyaNumber={gulyaNumber} />
-          <SquareGulya onChangeGulyaNumber={gulyaNumber} />
+          <Square onChangeNumber={number} />
+          <Square onChangeNumber={number} />
+          <Square onChangeNumber={number} />
+          <Square onChangeNumber={number} />
         </div>
         <div className="app__row">
-          <SquareGulya onChangeGulyaNumber={gulyaNumber} />
-          <SquareGulya onChangeGulyaNumber={gulyaNumber} />
-          <SquareGulya onChangeGulyaNumber={gulyaNumber} />
-        </div>
-        <div className="app__row">
-          <SquareGulya onChangeGulyaNumber={gulyaNumber} />
-          <SquareGulya onChangeGulyaNumber={gulyaNumber} />
-          <SquareGulya onChangeGulyaNumber={gulyaNumber} />
+          <Square onChangeNumber={number} />
+          <Square onChangeNumber={number} />
+          <Square onChangeNumber={number} />
+          <Square onChangeNumber={number} />
         </div>
       </div>
     </div>

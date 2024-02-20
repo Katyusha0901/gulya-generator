@@ -1,10 +1,10 @@
-import "./AddGulyaButton.css";
+import "./AddButton.css";
 
 interface Props {
   onChangeIsAdding: Function;
 }
 
-export const AddGulyaButton: React.FC<Props> = ({ onChangeIsAdding }) => {
+export const AddButton: React.FC<Props> = ({ onChangeIsAdding }) => {
   return (
     <button
       className="add-gulya"
@@ -12,7 +12,7 @@ export const AddGulyaButton: React.FC<Props> = ({ onChangeIsAdding }) => {
         onChangeIsAdding();
       }}
     >
-      Add Gulya
+      Add Emotion
     </button>
   );
 };
