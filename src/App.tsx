@@ -1,11 +1,15 @@
 import "./App.css";
 import { Square } from "./SquareGulya/Square";
 import { useState } from "react";
-import nullEmotion from "./image/nullEmotion.png";
-import firstEmotion from "./image/firstEmotion.png";
+import nullEmotion from "./image/nullEmotion.svg";
+import firstEmotion from "./image/firstEmotion.svg";
+import secondEmotion from "./image/secondEmotion.svg";
+import thirdEmotion from "./image/thirdEmotion.svg";
+import fourthEmotion from "./image/fourthEmotion.svg";
+import fifthEmotion from "./image/fifthEmotion.svg";
+import sixthEmotion from "./image/sixthEmotion.svg";
 
 export interface Emotion {
-  id: number;
   name: string;
   photo: string;
   isTurnRight: boolean;
@@ -13,43 +17,38 @@ export interface Emotion {
 
 export default function App() {
   const [emotions, setEmotions] = useState<Emotion[]>([
-    { id: 0, name: "Грусть", photo: nullEmotion, isTurnRight: false },
-    { id: 1, name: "Уныние", photo: firstEmotion, isTurnRight: false },
+    { name: "Грусть", photo: nullEmotion, isTurnRight: false },
+    { name: "Счастье", photo: sixthEmotion, isTurnRight: false },
+    { name: "Облегчение", photo: fourthEmotion, isTurnRight: false },
+    { name: "Безразличие", photo: secondEmotion, isTurnRight: false },
+    { name: "Спокойствие", photo: thirdEmotion, isTurnRight: false },
+    { name: "Удовлетворение", photo: firstEmotion, isTurnRight: false },
+    { name: "Уныние", photo: firstEmotion, isTurnRight: false },
+    { name: "Наслаждение", photo: fifthEmotion, isTurnRight: false },
   ]);
 
-  function findItem(i: number) {
-    // if (emotions[i].isTurnRight && !emotions[i + 1].isTurnRight) {
-    //   return emotions[i + 1];
-    // }
-    // const item = emotions.find((object) => object.id === i);
-    // const a = emotions.indexOf(item);
-
-    // return emotions[i];
-    const emotion: Emotion = emotions.find(
-      (object) => object.id === i
-    ) as Emotion;
-    return emotion;
-  }
-
-  function changeItem(item: Emotion) {
-    // setEmotions(emotions.map((i) => (i.id === item.id ? item : i)));
-    // setEmotions(emotions.map((i) => (i.(id+1) === item.id ? item : i)));
+  function changeItem(x: number, y: number) {
+    const copyArr = emotions.slice();
+    const first = copyArr[x];
+    copyArr[x] = copyArr[y];
+    copyArr[y] = first;
+    setEmotions(copyArr);
   }
 
   return (
     <div className="app">
       <div className="app__content">
         <div className="app__row">
-          <Square onChange={changeItem} item={findItem(0)} />
-          <Square onChange={changeItem} item={findItem(1)} />
-          <Square onChange={changeItem} item={findItem(0)} />
-          <Square onChange={changeItem} item={findItem(0)} />
+          <Square onChooseEmotion={changeItem} emotion={emotions[0]} x={0} />
+          <Square onChooseEmotion={changeItem} emotion={emotions[1]} x={1} />
+          <Square onChooseEmotion={changeItem} emotion={emotions[2]} x={2} />
+          <Square onChooseEmotion={changeItem} emotion={emotions[3]} x={3} />
         </div>
         <div className="app__row">
-          <Square onChange={changeItem} item={findItem(0)} />
-          <Square onChange={changeItem} item={findItem(0)} />
-          <Square onChange={changeItem} item={findItem(0)} />
-          <Square onChange={changeItem} item={findItem(0)} />
+          <Square onChooseEmotion={changeItem} emotion={emotions[4]} x={4} />
+          <Square onChooseEmotion={changeItem} emotion={emotions[5]} x={5} />
+          <Square onChooseEmotion={changeItem} emotion={emotions[6]} x={6} />
+          <Square onChooseEmotion={changeItem} emotion={emotions[7]} x={7} />
         </div>
       </div>
     </div>
