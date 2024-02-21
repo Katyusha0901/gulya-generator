@@ -7,7 +7,7 @@ interface Props {
 export const AddButton: React.FC<Props> = ({ onChangeIsAdding }) => {
   return (
     <button
-      className="add-gulya"
+      className="add"
       onClick={() => {
         onChangeIsAdding();
       }}

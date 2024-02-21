@@ -6,10 +6,10 @@ import { Emotion } from "../App";
 
 interface Props {
   item: Emotion;
-  changeItemDown: Function;
+  onChange: (item: Emotion) => void;
 }
 
-export const Square: React.FC<Props> = ({ item }) => {
+export const Square: React.FC<Props> = ({ item, onChange }) => {
   const [isAdding, setIsAdding] = useState<boolean>(true);
 
   function displayCenterContent() {
@@ -18,11 +18,11 @@ export const Square: React.FC<Props> = ({ item }) => {
     } else {
       return (
         <div>
-          <CloseButton onDelete={deleteItem} />
+          {/* <CloseButton onDelete={deleteItem} /> */}
           <div className="square__display">
             <p className="square__display-name">{item.name}</p>
             <img className="square__display-photo" src={item.photo} />
-            <input className="square__display-description" />
+            {/* <textarea className="square__display-description" /> */}
           </div>
         </div>
       );
@@ -39,17 +39,19 @@ export const Square: React.FC<Props> = ({ item }) => {
 
   return (
     <div className="square">
-      <div className="square__top">
-        <button className="square__up-arrow">up</button>
-      </div>
+      <button className="square__arrow">↑</button>
       <div className="square__center">
-        <button className="square__left-arrow">left</button>
+        <button className="square__arrow">←</button>
         <div className="square__center-content">{displayCenterContent()}</div>
-        <button className="square__right-arrow">right</button>
+
+        <button
+          className="square__arrow"
+          onClick={() => onChange({ ...item, isTurnRight: true })}
+        >
+          →
+        </button>
       </div>
-      <div className="square__bottom">
-        <button className="square__down-arrow">down</button>
-      </div>
+      <button className="square__arrow">↓</button>
     </div>
   );
 };

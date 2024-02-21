@@ -1,5 +1,15 @@
-.add-gulya {
+.add {
   display: flex;
-  width: 80px;
+  width: 10vw;
   margin: 5px;
+  font-size: 1.5vw;
+  padding: 0;
+  background-color: rgb(252, 252, 252);
+  border: 1px solid grey;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.add:hover {
+  background-color: rgb(245, 245, 245);
 }
