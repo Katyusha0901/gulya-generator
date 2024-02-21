@@ -11,20 +11,19 @@ import sixthEmotion from "./image/sixthEmotion.svg";
 
 export interface Emotion {
   name: string;
-  photo: string;
-  isTurnRight: boolean;
+  image: string;
 }
 
 export default function App() {
   const [emotions, setEmotions] = useState<Emotion[]>([
-    { name: "Грусть", photo: nullEmotion, isTurnRight: false },
-    { name: "Счастье", photo: sixthEmotion, isTurnRight: false },
-    { name: "Облегчение", photo: fourthEmotion, isTurnRight: false },
-    { name: "Безразличие", photo: secondEmotion, isTurnRight: false },
-    { name: "Спокойствие", photo: thirdEmotion, isTurnRight: false },
-    { name: "Удовлетворение", photo: firstEmotion, isTurnRight: false },
-    { name: "Уныние", photo: firstEmotion, isTurnRight: false },
-    { name: "Наслаждение", photo: fifthEmotion, isTurnRight: false },
+    { name: "Грусть", image: nullEmotion },
+    { name: "Счастье", image: sixthEmotion },
+    { name: "Облегчение", image: fourthEmotion },
+    { name: "Безразличие", image: secondEmotion },
+    { name: "Спокойствие", image: thirdEmotion },
+    { name: "Удовлетворение", image: firstEmotion },
+    { name: "Уныние", image: firstEmotion },
+    { name: "Наслаждение", image: fifthEmotion },
   ]);
 
   function changeItem(x: number, y: number) {

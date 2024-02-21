@@ -23,7 +23,7 @@ export const Square: React.FC<Props> = ({ x, emotion, onChooseEmotion }) => {
           {/* <CloseButton onDelete={deleteItem} /> */}
           <div className="square__display">
             <p className="square__display-name">{emotion.name}</p>
-            <img className="square__display-photo" src={emotion.photo} />
+            <img className="square__display-image" src={emotion.image} />
             {/* <textarea className="square__display-description" /> */}
           </div>
         </div>
