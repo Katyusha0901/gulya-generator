@@ -1,17 +1,26 @@
 import { useState } from "react";
 import "./Square.css";
 import { AddButton } from "./AddButton";
-import { CloseButton } from "./CloseButton";
 import { Emotion } from "../App";
 
 interface Props {
   x: number;
   emotion: Emotion;
-  onChooseEmotion: (x: number, y: number) => void;
+  onChooseEmotionRight: (x: number, y: number) => void;
+  onChooseEmotionUp: (x: number, y: number) => void;
+  onChooseEmotionLeft: (x: number, y: number) => void;
+  onChooseEmotionDown: (x: number, y: number) => void;
   // onChange: (item: Emotion) => void;
 }
 
-export const Square: React.FC<Props> = ({ x, emotion, onChooseEmotion }) => {
+export const Square: React.FC<Props> = ({
+  x,
+  emotion,
+  onChooseEmotionRight,
+  onChooseEmotionUp,
+  onChooseEmotionLeft,
+  onChooseEmotionDown,
+}) => {
   const [isAdding, setIsAdding] = useState<boolean>(true);
 
   function displayCenterContent() {
@@ -20,11 +29,9 @@ export const Square: React.FC<Props> = ({ x, emotion, onChooseEmotion }) => {
     } else {
       return (
         <div>
-          {/* <CloseButton onDelete={deleteItem} /> */}
           <div className="square__display">
             <p className="square__display-name">{emotion.name}</p>
             <img className="square__display-image" src={emotion.image} />
-            {/* <textarea className="square__display-description" /> */}
           </div>
         </div>
       );
@@ -35,32 +42,64 @@ export const Square: React.FC<Props> = ({ x, emotion, onChooseEmotion }) => {
     setIsAdding(false);
   }
 
-  function deleteItem() {
-    setIsAdding(true);
+  function chooseEmotionUp() {
+    const y = x - 4;
+    onChooseEmotionUp(x, y);
   }
 
-  function chooseEmotion() {
+  function chooseEmotionLeft() {
+    const y = x - 1;
+    onChooseEmotionLeft(x, y);
+  }
+
+  function chooseEmotionRight() {
     const y = x + 1;
-    onChooseEmotion(x, y);
+    onChooseEmotionRight(x, y);
+  }
+
+  function chooseEmotionDown() {
+    const y = x + 4;
+    onChooseEmotionDown(x, y);
   }
 
   return (
     <div className="square">
-      <button className="square__arrow">↑</button>
+      <button
+        className="square__arrow"
+        onClick={() => {
+          chooseEmotionUp();
+        }}
+      >
+        ↑
+      </button>
       <div className="square__center">
-        <button className="square__arrow">←</button>
+        <button
+          className="square__arrow"
+          onClick={() => {
+            chooseEmotionLeft();
+          }}
+        >
+          ←
+        </button>
         <div className="square__center-content">{displayCenterContent()}</div>
 
         <button
           className="square__arrow"
           onClick={() => {
-            chooseEmotion();
+            chooseEmotionRight();
           }}
         >
           →
         </button>
       </div>
-      <button className="square__arrow">↓</button>
+      <button
+        className="square__arrow"
+        onClick={() => {
+          chooseEmotionDown();
+        }}
+      >
+        ↓
+      </button>
     </div>
   );
 };

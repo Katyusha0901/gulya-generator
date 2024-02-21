@@ -24,3 +24,18 @@
   display: flex;
   flex-direction: row;
 }
+
+.app__congratulation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid grey;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.app__display-congratulation {
+  font-size: 20px;
+  font-weight: 800;
+}
