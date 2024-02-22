@@ -26,6 +26,10 @@
   cursor: pointer;
 }
 
+.square__arrow:hover {
+  background-color: rgb(245, 245, 245);
+}
+
 .square__center {
   display: flex;
   flex-direction: row;
