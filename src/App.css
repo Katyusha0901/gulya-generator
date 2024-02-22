@@ -17,7 +17,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
 }
 
 .app__row {
@@ -31,11 +30,11 @@
   align-items: center;
   background-color: rgb(255, 255, 255);
   border: 1px solid grey;
-  border-radius: 7px;
+  border-radius: 10px;
   padding: 10px;
 }
 
 .app__display-congratulation {
-  font-size: 20px;
+  font-size: 3vw;
   font-weight: 800;
 }

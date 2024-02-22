@@ -4,17 +4,16 @@ import { AddButton } from "./AddButton";
 import { Emotion } from "../App";
 
 interface Props {
-  x: number;
+  firstEmotion: number;
   emotion: Emotion;
-  onChooseEmotionRight: (x: number, y: number) => void;
-  onChooseEmotionUp: (x: number, y: number) => void;
-  onChooseEmotionLeft: (x: number, y: number) => void;
-  onChooseEmotionDown: (x: number, y: number) => void;
-  // onChange: (item: Emotion) => void;
+  onChooseEmotionRight: (firstEmotion: number, secondEmotion: number) => void;
+  onChooseEmotionUp: (firstEmotion: number, secondEmotion: number) => void;
+  onChooseEmotionLeft: (firstEmotion: number, secondEmotion: number) => void;
+  onChooseEmotionDown: (firstEmotion: number, secondEmotion: number) => void;
 }
 
 export const Square: React.FC<Props> = ({
-  x,
+  firstEmotion,
   emotion,
   onChooseEmotionRight,
   onChooseEmotionUp,
@@ -43,23 +42,23 @@ export const Square: React.FC<Props> = ({
   }
 
   function chooseEmotionUp() {
-    const y = x - 4;
-    onChooseEmotionUp(x, y);
+    const secondEmotion = firstEmotion - 4;
+    onChooseEmotionUp(firstEmotion, secondEmotion);
   }
 
   function chooseEmotionLeft() {
-    const y = x - 1;
-    onChooseEmotionLeft(x, y);
+    const secondEmotion = firstEmotion - 1;
+    onChooseEmotionLeft(firstEmotion, secondEmotion);
   }
 
   function chooseEmotionRight() {
-    const y = x + 1;
-    onChooseEmotionRight(x, y);
+    const secondEmotion = firstEmotion + 1;
+    onChooseEmotionRight(firstEmotion, secondEmotion);
   }
 
   function chooseEmotionDown() {
-    const y = x + 4;
-    onChooseEmotionDown(x, y);
+    const secondEmotion = firstEmotion + 4;
+    onChooseEmotionDown(firstEmotion, secondEmotion);
   }
 
   return (
