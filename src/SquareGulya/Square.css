@@ -36,8 +36,6 @@
   display: flex;
   flex-direction: row;
   height: 10vw;
-
-  /* margin: 10px; */
 }
 
 .square__display {
