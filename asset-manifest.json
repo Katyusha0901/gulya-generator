@@ -1,10 +1,24 @@
 {
   "files": {
-    "main.js": "/static/js/main.b395aacf.js",
-    "index.html": "/index.html",
-    "main.b395aacf.js.map": "/static/js/main.b395aacf.js.map"
+    "main.css": "/psychological-game/static/css/main.5a1147e5.css",
+    "main.js": "/psychological-game/static/js/main.adda5a39.js",
+    "static/media/LibreBaskerville-Italic.ttf": "/psychological-game/static/media/LibreBaskerville-Italic.3cbbed9ea170d3b9e426.ttf",
+    "static/media/LibreBaskerville-Bold.ttf": "/psychological-game/static/media/LibreBaskerville-Bold.6e5f70731aeed7c6e895.ttf",
+    "static/media/LibreBaskerville-Regular.ttf": "/psychological-game/static/media/LibreBaskerville-Regular.715e9cea90f54d5a4093.ttf",
+    "static/media/thirdEmotion.svg": "/psychological-game/static/media/thirdEmotion.64fe747611e3a7beee77a71ddde91925.svg",
+    "static/media/seventhEmotion.svg": "/psychological-game/static/media/seventhEmotion.b9db1bad5687b5bae2134af0125946d4.svg",
+    "static/media/firstEmotion.svg": "/psychological-game/static/media/firstEmotion.934f066907fac9378b2ee5b26fcd4e7f.svg",
+    "static/media/fifthEmotion.svg": "/psychological-game/static/media/fifthEmotion.9819db844356381e9916d2305f85e2df.svg",
+    "static/media/nullEmotion.svg": "/psychological-game/static/media/nullEmotion.1dd8c69aedf69e4de0e504c5aedd6bc7.svg",
+    "index.html": "/psychological-game/index.html",
+    "static/media/fourthEmotion.svg": "/psychological-game/static/media/fourthEmotion.e191963cf2cd904220c773a9a39b047e.svg",
+    "static/media/sixthEmotion.svg": "/psychological-game/static/media/sixthEmotion.94a6c31c59cac39d366cbe53bf77bdde.svg",
+    "static/media/secondEmotion.svg": "/psychological-game/static/media/secondEmotion.8368ce8edfaf60d8e03b902338a6ecc7.svg",
+    "main.5a1147e5.css.map": "/psychological-game/static/css/main.5a1147e5.css.map",
+    "main.adda5a39.js.map": "/psychological-game/static/js/main.adda5a39.js.map"
   },
   "entrypoints": [
-    "static/js/main.b395aacf.js"
+    "static/css/main.5a1147e5.css",
+    "static/js/main.adda5a39.js"
   ]
 }
