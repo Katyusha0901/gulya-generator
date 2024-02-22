@@ -70,68 +70,68 @@ export default function App() {
       <div className="app__content">
         <div className="app__row">
           <Square
-            onChooseEmotionUp={switchEmotions}
-            onChooseEmotionLeft={switchEmotions}
-            onChooseEmotionRight={switchEmotions}
-            onChooseEmotionDown={switchEmotions}
+            moveEmotionUp={switchEmotions}
+            moveEmotionLeft={switchEmotions}
+            moveEmotionRight={switchEmotions}
+            moveEmotionDown={switchEmotions}
             emotion={emotions[0]}
             firstEmotion={0}
           />
           <Square
-            onChooseEmotionUp={switchEmotions}
-            onChooseEmotionLeft={switchEmotions}
-            onChooseEmotionRight={switchEmotions}
-            onChooseEmotionDown={switchEmotions}
+            moveEmotionUp={switchEmotions}
+            moveEmotionLeft={switchEmotions}
+            moveEmotionRight={switchEmotions}
+            moveEmotionDown={switchEmotions}
             emotion={emotions[1]}
             firstEmotion={1}
           />
           <Square
-            onChooseEmotionUp={switchEmotions}
-            onChooseEmotionLeft={switchEmotions}
-            onChooseEmotionRight={switchEmotions}
-            onChooseEmotionDown={switchEmotions}
+            moveEmotionUp={switchEmotions}
+            moveEmotionLeft={switchEmotions}
+            moveEmotionRight={switchEmotions}
+            moveEmotionDown={switchEmotions}
             emotion={emotions[2]}
             firstEmotion={2}
           />
           <Square
-            onChooseEmotionUp={switchEmotions}
-            onChooseEmotionLeft={switchEmotions}
-            onChooseEmotionRight={switchEmotions}
-            onChooseEmotionDown={switchEmotions}
+            moveEmotionUp={switchEmotions}
+            moveEmotionLeft={switchEmotions}
+            moveEmotionRight={switchEmotions}
+            moveEmotionDown={switchEmotions}
             emotion={emotions[3]}
             firstEmotion={3}
           />
         </div>
         <div className="app__row">
           <Square
-            onChooseEmotionUp={switchEmotions}
-            onChooseEmotionLeft={switchEmotions}
-            onChooseEmotionRight={switchEmotions}
-            onChooseEmotionDown={switchEmotions}
+            moveEmotionUp={switchEmotions}
+            moveEmotionLeft={switchEmotions}
+            moveEmotionRight={switchEmotions}
+            moveEmotionDown={switchEmotions}
             emotion={emotions[4]}
             firstEmotion={4}
           />
           <Square
-            onChooseEmotionUp={switchEmotions}
-            onChooseEmotionLeft={switchEmotions}
-            onChooseEmotionRight={switchEmotions}
-            onChooseEmotionDown={switchEmotions}
+            moveEmotionUp={switchEmotions}
+            moveEmotionLeft={switchEmotions}
+            moveEmotionRight={switchEmotions}
+            moveEmotionDown={switchEmotions}
             emotion={emotions[5]}
             firstEmotion={5}
           />
           <Square
-            onChooseEmotionUp={switchEmotions}
-            onChooseEmotionLeft={switchEmotions}
-            onChooseEmotionRight={switchEmotions}
-            onChooseEmotionDown={switchEmotions}
+            moveEmotionUp={switchEmotions}
+            moveEmotionLeft={switchEmotions}
+            moveEmotionRight={switchEmotions}
+            moveEmotionDown={switchEmotions}
             emotion={emotions[6]}
             firstEmotion={6}
           />
           <Square
-            onChooseEmotionUp={switchEmotions}
-            onChooseEmotionLeft={switchEmotions}
-            onChooseEmotionRight={switchEmotions}
-            onChooseEmotionDown={switchEmotions}
+            moveEmotionUp={switchEmotions}
+            moveEmotionLeft={switchEmotions}
+            moveEmotionRight={switchEmotions}
+            moveEmotionDown={switchEmotions}
             emotion={emotions[7]}
             firstEmotion={7}
           />
