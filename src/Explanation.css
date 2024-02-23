@@ -18,6 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
 }
 
 .explanation__title {
@@ -25,7 +26,9 @@
   justify-content: center;
   align-items: center;
   font-size: 1.7vw;
-  padding: 15px;
+  padding-left: 12px;
+  padding-top: 12px;
+  padding-right: 7px;
 }
 
 .explanation__close {
