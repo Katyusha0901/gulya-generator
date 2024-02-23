@@ -19,20 +19,19 @@ export const Square: React.FC<Props> = ({
   function displayCenterContent() {
     if (isAdding) {
       return <AddButton onChangeIsAdding={changeIsAdding} />;
-    } else {
-      return (
-        <div>
-          <div className="square__display">
-            <p className="square__display-name">{emotion.name}</p>
-            <img
-              className="square__display-image"
-              src={emotion.image}
-              alt="emotion"
-            />
-          </div>
-        </div>
-      );
     }
+    return (
+      <div>
+        <div className="square__display">
+          <p className="square__display-name">{emotion.name}</p>
+          <img
+            className="square__display-image"
+            src={emotion.image}
+            alt="emotion"
+          />
+        </div>
+      </div>
+    );
   }
 
   function changeIsAdding() {
