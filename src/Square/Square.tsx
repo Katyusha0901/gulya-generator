@@ -14,7 +14,7 @@ export const Square: React.FC<Props> = ({
   emotion,
   moveEmotion,
 }) => {
-  const [isAdding, setIsAdding] = useState<boolean>(true);
+  const [isAdded, setisAdded] = useState<boolean>(true);
 
   return (
     <div className="square">
@@ -37,8 +37,8 @@ export const Square: React.FC<Props> = ({
           ←
         </button>
         <div className="square__center-content">
-          {isAdding ? (
-            <AddButton add={() => setIsAdding(false)} />
+          {isAdded ? (
+            <AddButton add={() => setisAdded(false)} />
           ) : (
             <div>
               <div className="square__display">
