@@ -24,7 +24,11 @@ export const Square: React.FC<Props> = ({
         <div>
           <div className="square__display">
             <p className="square__display-name">{emotion.name}</p>
-            <img className="square__display-image" src={emotion.image} />
+            <img
+              className="square__display-image"
+              src={emotion.image}
+              alt="emotion"
+            />
           </div>
         </div>
       );

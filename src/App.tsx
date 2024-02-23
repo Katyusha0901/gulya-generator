@@ -1,5 +1,6 @@
 import "./App.css";
-import { Square } from "./SquareGulya/Square";
+import { Square } from "./Square/Square";
+import { Explanation } from "./Explanation";
 import { useEffect, useState } from "react";
 import nullEmotion from "./image/nullEmotion.svg";
 import firstEmotion from "./image/firstEmotion.svg";
@@ -29,24 +30,23 @@ export default function App() {
     ].sort(() => Math.random() - 0.5)
   );
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
-  const correctOrder = [
-    "Грусть",
-    "Уныние",
-    "Безразличие",
-    "Спокойствие",
-    "Облегчение",
-    "Удовлетворение",
-    "Наслаждение",
-    "Счастье",
-  ];
-  const [isClosed, setIsClosed] = useState<boolean>(false);
 
   useEffect(() => {
+    const correctOrder = [
+      "Грусть",
+      "Уныние",
+      "Безразличие",
+      "Спокойствие",
+      "Облегчение",
+      "Удовлетворение",
+      "Наслаждение",
+      "Счастье",
+    ];
     const result = emotions.every(
       (emotion, index) => emotion.name === correctOrder[index]
     );
     setIsCorrect(result);
-  });
+  }, [emotions]);
 
   function switchEmotions(firstItem: number, secondItem: number) {
     const copyArr = emotions.slice();
@@ -64,11 +64,7 @@ export default function App() {
   return (
     <div className="app">
       <div className="app__explanation">
-        {!isClosed ? (
-          <Explanation />
-        ) : (
-          <div className="app__hiddenWindow"></div>
-        )}
+        <Explanation />
       </div>
 
       <div className="app__content">
