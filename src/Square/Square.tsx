@@ -7,19 +7,12 @@ interface Props {
   firstItem: number;
   emotion: Emotion;
   moveEmotion: (firstItem: number, secondItem: number) => void;
-  // moveEmotionUp: (firstItem: number, secondItem: number) => void;
-  // moveEmotionLeft: (firstItem: number, secondItem: number) => void;
-  // moveEmotionDown: (firstItem: number, secondItem: number) => void;
 }
 
 export const Square: React.FC<Props> = ({
   firstItem,
   emotion,
   moveEmotion,
-  // moveEmotionRight,
-  // moveEmotionUp,
-  // moveEmotionLeft,
-  // moveEmotionDown,
 }) => {
   const [isAdding, setIsAdding] = useState<boolean>(true);
 
@@ -42,33 +35,12 @@ export const Square: React.FC<Props> = ({
     setIsAdding(false);
   }
 
-  // function chooseEmotionWithDirectionUp() {
-  //   const secondItem = firstItem - 4;
-  //   moveEmotionUp(firstItem, secondItem);
-  // }
-
-  // function chooseEmotionWithDirectionLeft() {
-  //   const secondItem = firstItem - 1;
-  //   moveEmotionLeft(firstItem, secondItem);
-  // }
-
-  // function chooseEmotionWithDirectionRight() {
-  //   const secondItem = firstItem + 1;
-  //   moveEmotionRight(firstItem, secondItem);
-  // }
-
-  // function chooseEmotionWithDirectionDown() {
-  //   const secondItem = firstItem + 4;
-  //   moveEmotionDown(firstItem, secondItem);
-  // }
-
   return (
     <div className="square">
       <button
         className="square__arrow"
         onClick={() => {
           moveEmotion(firstItem, firstItem - 4);
-          // chooseEmotionWithDirectionUp();
         }}
       >
         ↑
@@ -78,8 +50,6 @@ export const Square: React.FC<Props> = ({
           className="square__arrow"
           onClick={() => {
             moveEmotion(firstItem, firstItem - 1);
-
-            // chooseEmotionWithDirectionLeft();
           }}
         >
           ←
@@ -90,8 +60,6 @@ export const Square: React.FC<Props> = ({
           className="square__arrow"
           onClick={() => {
             moveEmotion(firstItem, firstItem + 1);
-
-            // chooseEmotionWithDirectionRight();
           }}
         >
           →
@@ -101,8 +69,6 @@ export const Square: React.FC<Props> = ({
         className="square__arrow"
         onClick={() => {
           moveEmotion(firstItem, firstItem + 4);
-
-          // chooseEmotionWithDirectionDown();
         }}
       >
         ↓
