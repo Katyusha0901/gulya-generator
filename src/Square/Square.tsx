@@ -16,10 +16,6 @@ export const Square: React.FC<Props> = ({
 }) => {
   const [isAdding, setIsAdding] = useState<boolean>(true);
 
-  function changeIsAdding() {
-    setIsAdding(false);
-  }
-
   return (
     <div className="square">
       <button
@@ -42,7 +38,7 @@ export const Square: React.FC<Props> = ({
         </button>
         <div className="square__center-content">
           {isAdding ? (
-            <AddButton Add={changeIsAdding} />
+            <AddButton add={() => setIsAdding(false)} />
           ) : (
             <div>
               <div className="square__display">

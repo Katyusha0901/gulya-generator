@@ -1,15 +1,15 @@
 import "./AddButton.css";
 
 interface Props {
-  Add: Function;
+  add: () => void;
 }
 
-export const AddButton: React.FC<Props> = ({ Add }) => {
+export const AddButton: React.FC<Props> = ({ add }) => {
   return (
     <button
       className="add"
       onClick={() => {
-        Add();
+        add();
       }}
     >
       Add Emotion

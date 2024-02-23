@@ -29,6 +29,7 @@ export default function App() {
       { name: "Наслаждение", image: fifthEmotion },
     ].sort(() => Math.random() - 0.5)
   );
+
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
 
   useEffect(() => {
@@ -55,6 +56,7 @@ export default function App() {
     if (!copyArr[secondItem]) {
       return;
     }
+
     const first = copyArr[firstItem];
     copyArr[firstItem] = copyArr[secondItem];
     copyArr[secondItem] = first;
@@ -63,9 +65,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <div className="app__explanation">
-        <Explanation />
-      </div>
+      <Explanation />
 
       <div className="app__content">
         <div className="app__row">
@@ -112,7 +112,7 @@ export default function App() {
             firstItem={7}
           />
         </div>
-        
+
         <div className="app__congratulation">
           <div className="app__display-congratulation">
             {isCorrect ? "Правильно!" : "Подумайте еще"}
