@@ -1,15 +1,15 @@
 import "./AddButton.css";
 
 interface Props {
-  onChangeIsAdding: Function;
+  Add: Function;
 }
 
-export const AddButton: React.FC<Props> = ({ onChangeIsAdding }) => {
+export const AddButton: React.FC<Props> = ({ Add }) => {
   return (
     <button
       className="add"
       onClick={() => {
-        onChangeIsAdding();
+        Add();
       }}
     >
       Add Emotion

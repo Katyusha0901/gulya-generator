@@ -18,7 +18,7 @@ export const Square: React.FC<Props> = ({
 
   function displayCenterContent() {
     if (isAdding) {
-      return <AddButton onChangeIsAdding={changeIsAdding} />;
+      return <AddButton Add={changeIsAdding} />;
     }
     return (
       <div>
