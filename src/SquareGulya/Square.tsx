@@ -4,21 +4,22 @@ import { AddButton } from "./AddButton";
 import { Emotion } from "../App";
 
 interface Props {
-  firstEmotion: number;
+  firstItem: number;
   emotion: Emotion;
-  moveEmotionRight: (firstEmotion: number, secondEmotion: number) => void;
-  moveEmotionUp: (firstEmotion: number, secondEmotion: number) => void;
-  moveEmotionLeft: (firstEmotion: number, secondEmotion: number) => void;
-  moveEmotionDown: (firstEmotion: number, secondEmotion: number) => void;
+  moveEmotion: (firstItem: number, secondItem: number) => void;
+  // moveEmotionUp: (firstItem: number, secondItem: number) => void;
+  // moveEmotionLeft: (firstItem: number, secondItem: number) => void;
+  // moveEmotionDown: (firstItem: number, secondItem: number) => void;
 }
 
 export const Square: React.FC<Props> = ({
-  firstEmotion,
+  firstItem,
   emotion,
-  moveEmotionRight,
-  moveEmotionUp,
-  moveEmotionLeft,
-  moveEmotionDown,
+  moveEmotion,
+  // moveEmotionRight,
+  // moveEmotionUp,
+  // moveEmotionLeft,
+  // moveEmotionDown,
 }) => {
   const [isAdding, setIsAdding] = useState<boolean>(true);
 
@@ -41,32 +42,33 @@ export const Square: React.FC<Props> = ({
     setIsAdding(false);
   }
 
-  function chooseEmotionWithDirectionUp() {
-    const secondEmotion = firstEmotion - 4;
-    moveEmotionUp(firstEmotion, secondEmotion);
-  }
+  // function chooseEmotionWithDirectionUp() {
+  //   const secondItem = firstItem - 4;
+  //   moveEmotionUp(firstItem, secondItem);
+  // }
 
-  function chooseEmotionWithDirectionLeft() {
-    const secondEmotion = firstEmotion - 1;
-    moveEmotionLeft(firstEmotion, secondEmotion);
-  }
+  // function chooseEmotionWithDirectionLeft() {
+  //   const secondItem = firstItem - 1;
+  //   moveEmotionLeft(firstItem, secondItem);
+  // }
 
-  function chooseEmotionWithDirectionRight() {
-    const secondEmotion = firstEmotion + 1;
-    moveEmotionRight(firstEmotion, secondEmotion);
-  }
+  // function chooseEmotionWithDirectionRight() {
+  //   const secondItem = firstItem + 1;
+  //   moveEmotionRight(firstItem, secondItem);
+  // }
 
-  function chooseEmotionWithDirectionDown() {
-    const secondEmotion = firstEmotion + 4;
-    moveEmotionDown(firstEmotion, secondEmotion);
-  }
+  // function chooseEmotionWithDirectionDown() {
+  //   const secondItem = firstItem + 4;
+  //   moveEmotionDown(firstItem, secondItem);
+  // }
 
   return (
     <div className="square">
       <button
         className="square__arrow"
         onClick={() => {
-          chooseEmotionWithDirectionUp();
+          moveEmotion(firstItem, firstItem - 4);
+          // chooseEmotionWithDirectionUp();
         }}
       >
         ↑
@@ -75,7 +77,9 @@ export const Square: React.FC<Props> = ({
         <button
           className="square__arrow"
           onClick={() => {
-            chooseEmotionWithDirectionLeft();
+            moveEmotion(firstItem, firstItem - 1);
+
+            // chooseEmotionWithDirectionLeft();
           }}
         >
           ←
@@ -85,7 +89,9 @@ export const Square: React.FC<Props> = ({
         <button
           className="square__arrow"
           onClick={() => {
-            chooseEmotionWithDirectionRight();
+            moveEmotion(firstItem, firstItem + 1);
+
+            // chooseEmotionWithDirectionRight();
           }}
         >
           →
@@ -94,7 +100,9 @@ export const Square: React.FC<Props> = ({
       <button
         className="square__arrow"
         onClick={() => {
-          chooseEmotionWithDirectionDown();
+          moveEmotion(firstItem, firstItem + 4);
+
+          // chooseEmotionWithDirectionDown();
         }}
       >
         ↓
