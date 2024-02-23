@@ -11,15 +11,8 @@
   background-color: rgb(255, 255, 255);
   border: 1px solid grey;
   box-shadow: 1px 5px 5px 5px gray;
-  border-radius: 10px;
-}
-
-.explanation__top {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 48vw;
-  margin-right: 10px;
+  border-radius: 1vw;
+  padding: 1vw;
 }
 
 .explanation__title {
@@ -27,22 +20,20 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-size: 1.5vw;
-  margin-top: 2vw;
-  padding-left: 1vw;
-  padding-right: 4vw;
+  font-size: 1.7vw;
   width: 40vw;
 }
 
 .explanation__close {
   display: flex;
   justify-content: center;
+  align-self: flex-end;
   align-items: center;
   cursor: pointer;
   font-size: 2vw;
   font-weight: 800;
   border: 0.07vw solid rgb(17, 17, 17);
-  border-radius: 7px;
+  border-radius: 0.5vw;
   width: 2vw;
   height: 2vw;
 }
