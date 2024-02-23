@@ -16,24 +16,6 @@ export const Square: React.FC<Props> = ({
 }) => {
   const [isAdding, setIsAdding] = useState<boolean>(true);
 
-  function displayCenterContent() {
-    if (isAdding) {
-      return <AddButton Add={changeIsAdding} />;
-    }
-    return (
-      <div>
-        <div className="square__display">
-          <p className="square__display-name">{emotion.name}</p>
-          <img
-            className="square__display-image"
-            src={emotion.image}
-            alt="emotion"
-          />
-        </div>
-      </div>
-    );
-  }
-
   function changeIsAdding() {
     setIsAdding(false);
   }
@@ -48,6 +30,7 @@ export const Square: React.FC<Props> = ({
       >
         ↑
       </button>
+
       <div className="square__center">
         <button
           className="square__arrow"
@@ -57,8 +40,22 @@ export const Square: React.FC<Props> = ({
         >
           ←
         </button>
-        <div className="square__center-content">{displayCenterContent()}</div>
-
+        <div className="square__center-content">
+          {isAdding ? (
+            <AddButton Add={changeIsAdding} />
+          ) : (
+            <div>
+              <div className="square__display">
+                <p className="square__display-name">{emotion.name}</p>
+                <img
+                  className="square__display-image"
+                  src={emotion.image}
+                  alt="emotion"
+                />
+              </div>
+            </div>
+          )}
+        </div>
         <button
           className="square__arrow"
           onClick={() => {
@@ -68,6 +65,7 @@ export const Square: React.FC<Props> = ({
           →
         </button>
       </div>
+
       <button
         className="square__arrow"
         onClick={() => {
