@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/psychological-game/static/css/main.3a9514af.css",
-    "main.js": "/psychological-game/static/js/main.7542c740.js",
+    "main.js": "/psychological-game/static/js/main.1dc9faed.js",
     "static/media/LibreBaskerville-Italic.ttf": "/psychological-game/static/media/LibreBaskerville-Italic.3cbbed9ea170d3b9e426.ttf",
     "static/media/LibreBaskerville-Bold.ttf": "/psychological-game/static/media/LibreBaskerville-Bold.6e5f70731aeed7c6e895.ttf",
     "static/media/LibreBaskerville-Regular.ttf": "/psychological-game/static/media/LibreBaskerville-Regular.715e9cea90f54d5a4093.ttf",
@@ -15,10 +15,10 @@
     "static/media/sixthEmotion.svg": "/psychological-game/static/media/sixthEmotion.94a6c31c59cac39d366cbe53bf77bdde.svg",
     "static/media/secondEmotion.svg": "/psychological-game/static/media/secondEmotion.8368ce8edfaf60d8e03b902338a6ecc7.svg",
     "main.3a9514af.css.map": "/psychological-game/static/css/main.3a9514af.css.map",
-    "main.7542c740.js.map": "/psychological-game/static/js/main.7542c740.js.map"
+    "main.1dc9faed.js.map": "/psychological-game/static/js/main.1dc9faed.js.map"
   },
   "entrypoints": [
     "static/css/main.3a9514af.css",
-    "static/js/main.7542c740.js"
+    "static/js/main.1dc9faed.js"
   ]
 }
