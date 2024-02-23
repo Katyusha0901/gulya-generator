@@ -45,6 +45,7 @@ export default function App() {
     const result = emotions.every(
       (emotion, index) => emotion.name === correctOrder[index]
     );
+
     setIsCorrect(result);
   }, [emotions]);
 
@@ -54,7 +55,6 @@ export default function App() {
     if (!copyArr[secondItem]) {
       return;
     }
-
     const first = copyArr[firstItem];
     copyArr[firstItem] = copyArr[secondItem];
     copyArr[secondItem] = first;
@@ -112,6 +112,7 @@ export default function App() {
             firstItem={7}
           />
         </div>
+        
         <div className="app__congratulation">
           <div className="app__display-congratulation">
             {isCorrect ? "Правильно!" : "Подумайте еще"}
